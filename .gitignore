@@ -2,3 +2,4 @@
 /.idea/voting-demo.iml
 /.idea/workspace.xml
 /node_modules
+/.env

@@ -1,4 +1,4 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.6.0;
 
 contract DateTime {
         /*
@@ -58,7 +58,7 @@ contract DateTime {
                 }
         }
 
-        function parseTimestamp(uint timestamp) internal pure returns (_DateTime dt) {
+        function parseTimestamp(uint timestamp) internal pure returns (_DateTime memory dt) {
                 uint secondsAccountedFor = 0;
                 uint buf;
                 uint8 i;
@@ -124,7 +124,8 @@ contract DateTime {
                         }
                         year -= 1;
                 }
-                return year;
+
+            return year;
         }
 
         function getMonth(uint timestamp) public pure returns (uint8) {
